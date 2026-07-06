@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopVers - Premium Footwear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/thumbnails/008/956/590/small/creative-abstract-black-silhouette-running-shoe-design-logo-design-template-free-vector.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --cls-dark: #090d16;
+            --cls-gray-dark: #475569;
+            --cls-gray-light: #f8fafc;
+            --cls-border: #e2e8f0;
+            --cls-accent: #e11d48; /* Premium Rose Red */
+            --font-main: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px; /* Prevents sticky navbar from overlapping sections when jumping */
+        }
+
+        body {
+            background-color: #ffffff;
+            font-family: var(--font-main);
+            color: var(--cls-dark);
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- Minimalist Navbar --- */
+        .navbar-premium {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--cls-border);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: var(--cls-dark) !important;
+        }
+
+        .nav-link {
+            color: var(--cls-gray-dark) !important;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.5rem 1rem !important;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover, .nav-link:focus {
+            color: var(--cls-dark) !important;
+            background-color: var(--cls-gray-light);
+        }
+
+        /* --- Premium Custom Button Styles --- */
+        .btn-premium {
+            background-color: var(--cls-accent);
+            color: #ffffff !important;
+            border: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .btn-premium:hover {
+            background-color: var(--cls-dark);
+            box-shadow: 0 4px 12px rgba(225, 29, 72, 0.25);
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            margin-top: 1.5rem;
+        }
+
+        .hero-img-overlay {
+            background-image: url("https://static.runnea.com/images/202209/las-sneakers-mas-deseadas-2022-1200x675x80xX.jpg?1");
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 0; right: 0; bottom: 0;
+            width: 50%;
+            display: none;
+        }
+
+        @media (min-width: 992px) {
+            .hero-img-overlay { display: block; }
+        }
+
+        .back {
+            min-height: 70vh;
+            border-radius: 20px;
+        }
+
+        .backgrounds {
+            background-image: url("https://static.vecteezy.com/system/resources/previews/013/773/657/large_2x/pattern-of-white-sneakers-isolated-on-white-background-sportive-pair-of-shoes-for-mockup-fashionable-stylish-sports-casual-shoes-modern-and-minimalist-wallpaper-of-fashion-lifestyle-photo.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* --- Login Section Custom Styles --- */
+        .login-card {
+            border: 1px solid var(--cls-border);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(9, 13, 22, 0.05);
+            background-color: #ffffff;
+        }
+
+        .form-control:focus {
+            border-color: var(--cls-accent);
+            box-shadow: 0 0 0 0.25rem rgba(225, 29, 72, 0.15);
+        }
+
+        .text-accent {
+            color: var(--cls-accent);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-premium sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#home">ShopVers</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="mainNavigation">
+                <ul class="navbar-nav gap-2 mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link text-danger fw-bold" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <!-- Updated href to smoothly scroll to the #login section -->
+                    <li class="nav-item ms-lg-2 d-flex justify-content-center"><a class="btn btn-premium btn-sm px-4 py-2 text-center" href="#login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION: CONTACT -->
+    <div id="contact" class="container my-5 py-4">
+        <h1 class="text-center mb-5 mt-5">Contact Us</h1>
+        <div class="row g-5">
+            <!-- Left Side -->
+            <div class="col-lg-5 col-md-12">
+                <div class="d-flex gap-3 mb-5 align-items-center">
+                    <img src="https://img.icons8.com/?size=100&id=sXhQ3VwDMMBx&format=png&color=000000" width="50" height="50" alt="">
+                    <div>
+                        <h4 class="mb-0 fw-bold">Call</h4>
+                        <p class="text-muted mb-0">088 997 3214</p>
+                    </div>
+                </div>
+
+                <div class="d-flex gap-3 mb-5 align-items-center">
+                    <img src="https://img.icons8.com/?size=100&id=108813&format=png&color=000000" width="50" height="50" alt="">
+                    <div>
+                        <h4 class="mb-0 fw-bold">Email</h4>
+                        <a href="mailto:vanndakoa168@gmail.com" class="text-muted text-decoration-none">vanndakoa168@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="d-flex gap-3 mb-5 align-items-center">
+                    <img src="https://img.icons8.com/?size=100&id=44023&format=png&color=000000" width="50" height="50" alt="">
+                    <div>
+                        <h4 class="mb-0 fw-bold">Location</h4>
+                        <p class="text-muted mb-0">Srey Sonthor, Kampong Cham</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Form -->
+            <form class="col-lg-7 col-md-12">
+                <div class="form-floating mb-4">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Username">
+                    <label for="floatingInput">Username</label>
+                </div>
+
+                <div class="form-floating mb-4">
+                    <input type="email" class="form-control" id="floatingEmail" placeholder="Email">
+                    <label for="floatingEmail">Email</label>
+                </div>
+
+                <div class="form-floating mb-4">
+                    <textarea class="form-control" id="floatingTextarea2" placeholder="Message" style="height:130px"></textarea>
+                    <label for="floatingTextarea2">Message</label>
+                </div>
+
+                <div class="text-center">
+                    <button type="reset" class="btn btn-premium px-5 py-2.5 rounded-3 w-100">
+                        SEND NOW
+                    </button>
+                </div>
+            </form>
+         </div>
+    </div>
+
+    <!-- NEW SECTION: LOGIN -->
+    <div id="login" class="container my-5 py-5 border-top">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-7 col-sm-10">
+                <div class="login-card p-4 p-md-5">
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold mb-1">Welcome Back</h2>
+                        <p class="text-muted small">Login to access your premium ShopVers experience</p>
+                    </div>
+                    
+                    <form>
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label fw-semibold small text-secondary">Email Address</label>
+                            <input type="email" class="form-control py-2" id="emailInput" placeholder="name@example.com" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <label for="passwordInput" class="form-label fw-semibold small text-secondary mb-0">Password</label>
+                                <a href="#" class="text-accent text-decoration-none small">Forgot password?</a>
+                            </div>
+                            <input type="password" class="form-control py-2" id="passwordInput" placeholder="••••••••" required>
+                        </div>
+
+                        <div class="mb-4 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label small text-secondary" for="rememberMe">Remember me for 30 days</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-premium w-100 py-2.5 mb-3">Sign In</button>
+                    </form>
+
+                    <div class="text-center mt-4">
+                        <p class="small text-muted mb-0">Don't have an account? <a href="#" class="text-accent text-decoration-none fw-semibold">Create an account</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Branding Statement -->
+    <div class="bg-light py-4 border-top mt-auto">
+        <h1 class="m-0 text-center fw-lighter fs-4 text-muted">Thank you for choosing ShopVers</h1>
+    </div>
+
+    <!-- Bootstrap CSS Framework Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
